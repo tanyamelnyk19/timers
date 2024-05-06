@@ -1,0 +1,29 @@
+{
+  "name": "timers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanyamelnyk19/timers.git"
+  },
+  "keywords": [],
+  "author": "Tetiana Melnyk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tanyamelnyk19/timers/issues"
+  },
+  "homepage": "https://github.com/tanyamelnyk19/timers#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-nuke-dist": "^1.0.1"
+  },
+  "dependencies": {
+    "bootstrap.native": "^3.0.13",
+    "lodash.throttle": "^4.1.1"
+  }
+}
