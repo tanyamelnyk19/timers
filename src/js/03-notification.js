@@ -1,12 +1,5 @@
 import '../css/common.css';
 
-/**
- * - Показываем и скрываем добавляя/удаляя класс is-visible
- * - Скрываем через определённое время
- * - Скрываем при клике
- * - Не забываем чистить таймер
- */
-
 const NOTIFICATION_DELAY = 3000;
 let timeoutId = null;
 const refs = {
@@ -17,9 +10,6 @@ refs.notification.addEventListener('click', onNotificationClick);
 
 showNotification();
 
-/*
- * Функции
- */
 function onNotificationClick() {
   hideNotification();
   clearTimeout(timeoutId);
@@ -27,11 +17,7 @@ function onNotificationClick() {
 
 function showNotification() {
   refs.notification.classList.add('is-visible');
-
-  timeoutId = setTimeout(() => {
-    console.log('Закрываем алерт автоматически чтобы не висел');
-    hideNotification();
-  }, NOTIFICATION_DELAY);
+  timeoutId = setTimeout(hideNotification, NOTIFICATION_DELAY);
 }
 
 function hideNotification() {
